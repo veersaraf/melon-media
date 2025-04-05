@@ -5,12 +5,12 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-pink-50">
       {/* Logo in top left */}
       <motion.div 
-        className="absolute top-8 left-8 z-10"
+        className="absolute top-6 left-8 z-10"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <img src="/logo.png" alt="Melon Media Logo" className="h-40 w-auto" />
+        <img src="/logo.png" alt="Melon Media Logo" className="h-16 w-auto" />
       </motion.div>
 
       {/* Abstract gradient blobs */}
