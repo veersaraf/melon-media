@@ -39,8 +39,7 @@ const Hero = () => {
           duration: 0.8,
           delay: 0.2
         }}>
-            Product<br />
-            Photography
+            Product Photography made simple
           </motion.h1>
           
           <motion.div className="text-lg md:text-xl text-gray-700 max-w-md" initial={{
