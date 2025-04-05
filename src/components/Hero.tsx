@@ -92,30 +92,32 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Redesigned work button to match the image */}
-      <div className="absolute bottom-24 w-full flex justify-center">
+      {/* More visible work button */}
+      <div className="absolute bottom-24 w-full flex justify-center z-30">
         <motion.button
           onClick={scrollToWork}
           className="
-            inline-flex items-center gap-3
-            px-8 py-3
-            bg-pink-100 rounded-full
+            inline-flex items-center gap-2
+            px-6 py-2
+            bg-pink-200/90 rounded-full
             transition-all duration-300
-            hover:bg-pink-200
+            hover:bg-pink-300/90
+            shadow-sm
+            z-30
           "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <ChevronDown className="w-5 h-5 text-black" />
-          <span className="text-xl text-black font-semibold">
+          <ChevronDown className="w-4 h-4 text-gray-900" />
+          <span className="text-base text-gray-900 font-medium">
             Work
           </span>
         </motion.button>
       </div>
 
-      {/* Smooth gradient transition to work section */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-pink-50 to-pink-50/80 pointer-events-none"></div>
+      {/* Move the gradient transition below in z-index */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-pink-50 to-pink-50/80 pointer-events-none z-20" />
     </section>;
 };
 export default Hero;
