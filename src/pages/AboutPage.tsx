@@ -9,27 +9,25 @@ const AboutPage = () => {
         <div className="absolute bottom-1/4 right-1/3 w-[30%] h-[30%] rounded-full bg-pink-300/20 blur-3xl"></div>
       </div>
 
-      {/* About content with Bento Grid */}
-      <section className="container mx-auto relative z-10">
+      {/* About content */}
+      <section className="container mx-auto relative z-10 flex justify-center items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+          className="max-w-2xl mx-auto bg-white bg-opacity-60 backdrop-blur-sm rounded-2xl shadow-xl p-8"
         >
-          {/* Text Section */}
-          <div className="space-y-6 text-lg text-gray-800 p-6 bg-white bg-opacity-60 rounded-2xl shadow-xl backdrop-blur-sm">
+          <div className="space-y-6 text-lg text-gray-800 text-center">
             <p>
-              At <span className="text-pink-500 font-semibold">Melon Media</span>, we create
-              <span className="text-pink-500 font-semibold"> stunning product photographs</span> that present your products at their very best.
-              Our team blends technical know-how with creative insight, delivering visuals that
-              <span className="text-pink-500 font-semibold"> tell your brand's story</span> and capture attention effortlessly.
+              At <span className="text-pink-500 font-semibold">Melon Media</span>, we specialize in creating
+              <span className="text-pink-500 font-semibold"> stunning product photographs</span> that showcase your products in their best light. Our team combines
+              <span className="text-pink-500 font-semibold"> technical expertise</span> with
+              <span className="text-pink-500 font-semibold"> creative vision</span> to deliver images that tell your brand's story and captivate your audience.
             </p>
             <p>
-              With extensive expertise in product photography, we appreciate the
-              <span className="text-pink-500 font-semibold"> importance of every detail</span>. From meticulous lighting and composition to expert
-              post-processing, we ensure each photograph authentically represents your brand, helping you
-              <span className="text-pink-500 font-semibold"> stand out in a crowded market</span>.
+              With years of experience in product photography, we understand the importance of every detail. From
+              <span className="text-pink-500 font-semibold"> lighting and composition</span> to post-processing, we ensure that each image perfectly represents your brand and helps you
+              <span className="text-pink-500 font-semibold"> stand out in today's competitive market</span>.
             </p>
           </div>
         </motion.div>
