@@ -16,7 +16,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Product Photography<br/>made simple
+          Product Photograhy<br/>made simple
         </motion.h1>
 
         <motion.p
