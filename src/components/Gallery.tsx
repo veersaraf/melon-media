@@ -54,7 +54,7 @@ const projects = [{
 }];
 const Gallery = () => {
   const [selectedProject, setSelectedProject] = useState<null | typeof projects[0]>(null);
-  return <section id="work" className="pt-32 pb-20 px-4 bg-gradient-to-b from-pink-50/80 to-white py-0">
+  return <section id="work" className="pt-16 md:pt-32 pb-16 md:pb-20 px-4 bg-gradient-to-b from-pink-50/80 to-white">
       <div className="container mx-auto relative z-10">
         <motion.div className="mb-16 text-center" initial={{
         opacity: 0,
@@ -75,7 +75,7 @@ const Gallery = () => {
         </motion.div>
         
         {/* Gallery grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {projects.map((project, index) => (
             <motion.div 
               key={project.id} 
