@@ -1,9 +1,6 @@
-
 import { motion } from 'framer-motion';
-
 const AboutPage = () => {
-  return (
-    <div className="min-h-screen pt-32 pb-20 px-4 bg-gradient-to-b from-white to-white relative overflow-hidden">
+  return <div className="min-h-screen pt-32 pb-20 px-4 bg-gradient-to-b from-white to-white relative overflow-hidden">
       {/* Abstract gradient blobs - similar to Hero but different positions */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 left-1/4 w-[50%] h-[50%] rounded-full bg-pink-100/20 blur-3xl"></div>
@@ -14,16 +11,17 @@ const AboutPage = () => {
       
       {/* About content */}
       <section className="container mx-auto relative z-10">
-        <motion.div 
-          className="max-w-2xl mx-auto text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <motion.div className="max-w-2xl mx-auto text-center" initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }}>
           <h1 className="text-4xl md:text-6xl font-bold mb-8 relative inline-block">
-            <span className="bg-gradient-to-r from-pink-400 to-pink-500 bg-clip-text text-transparent">
-              About Melon Media
-            </span>
+            
             <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-pink-300 to-pink-500 rounded-full"></div>
           </h1>
           <div className="space-y-8 text-lg text-gray-700">
@@ -36,8 +34,6 @@ const AboutPage = () => {
           </div>
         </motion.div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default AboutPage;
