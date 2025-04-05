@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-pink-50">
-      {/* Original logo in top left */}
+      {/* Original logo in top left - visible on all screens */}
       <motion.div 
         className="absolute top-2 left-12 z-10"
         initial={{ opacity: 0, y: -20 }}
@@ -11,9 +11,9 @@ const Hero = () => {
         <img src="/logo.png" alt="Melon Media Logo" className="h-60 w-auto object-fill" />
       </motion.div>
 
-      {/* Second logo - top right, slightly rotated */}
+      {/* Second logo - top right, only visible on desktop */}
       <motion.div 
-        className="absolute top-24 right-16 z-10"
+        className="absolute top-24 right-16 z-10 hidden md:block"
         initial={{ opacity: 0, rotate: -15, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
@@ -21,9 +21,9 @@ const Hero = () => {
         <img src="/logo.png" alt="Melon Media Logo" className="h-60 w-auto object-fill transform rotate-12" />
       </motion.div>
 
-      {/* Third logo - bottom left, rotated other direction */}
+      {/* Third logo - bottom left, only visible on desktop */}
       <motion.div 
-        className="absolute bottom-48 left-24 z-10"
+        className="absolute bottom-48 left-24 z-10 hidden md:block"
         initial={{ opacity: 0, rotate: 15, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
@@ -31,9 +31,9 @@ const Hero = () => {
         <img src="/logo.png" alt="Melon Media Logo" className="h-60 w-auto object-fill transform -rotate-12" />
       </motion.div>
 
-      {/* Fourth logo - bottom right */}
+      {/* Bottom logo - visible on all screens, positioned differently on mobile/desktop */}
       <motion.div 
-        className="absolute bottom-32 right-20 z-10"
+        className="absolute bottom-32 right-8 md:right-20 z-10"
         initial={{ opacity: 0, rotate: -10, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
