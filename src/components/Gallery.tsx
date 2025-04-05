@@ -7,49 +7,56 @@ const projects = [{
   id: 1,
   title: "Cosmetics Collection",
   category: "Beauty",
-  image: "/lovable-uploads/4f9ebaaf-61f9-4c32-9a80-5dd5a13d5f87.png",
+  image: "/gallery/shot1.jpeg",
   description: "Macro photography showcasing the textures and details of luxury cosmetic products."
 }, {
   id: 2,
   title: "Tech Gadgets",
   category: "Technology",
-  image: "/lovable-uploads/59ba7026-524d-4f5a-9fad-2ae4a0684ff9.png",
+  image: "/gallery/shot2.jpeg",
   description: "Clean, minimal product shots of the latest tech gadgets with creative lighting."
 }, {
   id: 3,
   title: "Food Photography",
   category: "Culinary",
-  image: "/lovable-uploads/a172edaf-2f7c-4ddd-a07f-baf1bc186b85.png",
+  image: "/gallery/shot3.png",
   description: "Appetizing macro photography of food items showcasing texture and composition."
 }, {
   id: 4,
   title: "Jewelry Collection",
   category: "Fashion",
-  image: "/lovable-uploads/9e7374a6-b845-4d06-95df-617f23775c07.png",
+  image: "/gallery/shot4.png",
   description: "Detailed close-ups of jewelry pieces highlighting craftsmanship and materials."
 }, {
   id: 5,
   title: "Melon Media Logo",
   category: "Branding",
-  image: "/lovable-uploads/d3123438-486c-4275-95a6-c21d583ad3d2.png",
+  image: "/gallery/shot5.jpeg",
   description: "Our brand identity showcasing the minimal and modern aesthetic we bring to our work."
 }, {
   id: 6,
   title: "Navbar Reference",
   category: "UI Design",
-  image: "/lovable-uploads/27bc8a4b-f77a-4ed2-ac03-caf5a5d3c824.png",
+  image: "/gallery/shot6.png",
   description: "Clean navbar design for modern websites."
 }, {
   id: 7,
   title: "Hero Reference",
   category: "UI Design",
-  image: "/lovable-uploads/ed4cbb61-9c0c-42ee-bc9b-3b451c2e74ee.png",
+  image: "/gallery/shot7.png",
   description: "Beautiful hero section with gradient background and clean typography."
 }, {
   id: 8,
   title: "Product Photography",
   category: "Product",
-  image: "/lovable-uploads/4f9ebaaf-61f9-4c32-9a80-5dd5a13d5f87.png",
+  image: "/gallery/shot8.png",
+  description: "Detailed product photography with optimal lighting and composition."
+},
+{
+  id: 9,
+  title: "Product Photography",
+  category: "Product",
+  image: "/gallery/shot9.png",
   description: "Detailed product photography with optimal lighting and composition."
 }];
 const Gallery = () => {
