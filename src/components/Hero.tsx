@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion';
 import ContactButton from './ContactButton';
+import { ChevronDown } from 'lucide-react';
 
 const Hero = () => {
+  const scrollToWork = () => {
+    document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-pink-50">
       {/* Original logo in top left - visible on all screens */}
       <motion.div 
@@ -86,6 +91,41 @@ const Hero = () => {
           <ContactButton />
         </motion.div>
       </div>
+
+      {/* Animated scroll arrow */}
+      <motion.button
+        onClick={scrollToWork}
+        className="
+          absolute bottom-12 left-1/2 -translate-x-1/2
+          flex items-center gap-2
+          px-6 py-2
+          bg-white/80 backdrop-blur-md
+          rounded-full shadow-sm
+          text-sm font-medium text-gray-800
+          hover:shadow-md transition-all duration-300
+          group
+        "
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ 
+          opacity: 1, 
+          y: 0,
+        }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+      >
+        Work
+        <motion.div
+          animate={{ 
+            y: [0, 4, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <ChevronDown className="w-4 h-4 text-pink-500 group-hover:text-pink-600" />
+        </motion.div>
+      </motion.button>
 
       {/* Smooth gradient transition to work section */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-pink-50 to-pink-50/80 pointer-events-none"></div>
