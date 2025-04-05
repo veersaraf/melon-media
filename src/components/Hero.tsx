@@ -92,42 +92,27 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Improved animated scroll arrow */}
-      <motion.button
-        onClick={scrollToWork}
-        className="
-          absolute bottom-16 left-1/2 -translate-x-1/2
-          flex flex-col items-center gap-2
-          px-8 py-3
-          bg-white/90 backdrop-blur-md
-          rounded-full shadow-md
-          hover:shadow-lg
-          transition-all duration-300
-          group z-20
-        "
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ 
-          opacity: 1, 
-          y: 0,
-        }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-      >
-        <span className="text-base font-medium text-gray-800 tracking-wide">
-          Work
-        </span>
-        <motion.div
-          animate={{ 
-            y: [0, 4, 0],
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+      {/* Redesigned work button to match the image */}
+      <div className="absolute bottom-24 w-full flex justify-center">
+        <motion.button
+          onClick={scrollToWork}
+          className="
+            inline-flex items-center gap-3
+            px-8 py-3
+            bg-pink-100 rounded-full
+            transition-all duration-300
+            hover:bg-pink-200
+          "
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <ChevronDown className="w-5 h-5 text-pink-500 group-hover:text-pink-600" />
-        </motion.div>
-      </motion.button>
+          <ChevronDown className="w-5 h-5 text-black" />
+          <span className="text-xl text-black font-semibold">
+            Work
+          </span>
+        </motion.button>
+      </div>
 
       {/* Smooth gradient transition to work section */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-pink-50 to-pink-50/80 pointer-events-none"></div>
