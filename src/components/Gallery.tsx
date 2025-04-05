@@ -133,19 +133,22 @@ const Gallery = () => {
         </div>
       </div>
       
-      {/* Simplified Modal */}
+      {/* Updated Modal */}
       <Dialog 
         open={!!selectedProject} 
         onOpenChange={open => !open && setSelectedProject(null)}
       >
-        <DialogContent className="max-w-3xl p-2 overflow-hidden rounded-2xl border-0 bg-white">
+        <DialogContent className="max-w-[90vw] md:max-w-[80vw] p-3 bg-transparent border-0">
           {selectedProject && (
-            <div className="relative w-full">
+            <div className="relative w-full bg-white rounded-[2rem] p-3 shadow-lg">
               <img 
                 src={selectedProject.image} 
                 alt={selectedProject.title} 
-                className="w-full h-auto object-contain rounded-xl"
-                style={{ maxHeight: '80vh' }} // Ensures image doesn't exceed viewport height
+                className="w-full h-auto object-contain rounded-[1.5rem]"
+                style={{
+                  maxHeight: '85vh',
+                  aspectRatio: 'auto'
+                }}
               />
             </div>
           )}
