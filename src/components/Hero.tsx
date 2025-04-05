@@ -5,17 +5,17 @@ import { ChevronDown } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-pink-50">
-      {/* Top logo - adjusted spacing */}
+      {/* Top left logo - bigger on desktop */}
       <motion.div 
         className="absolute top-16 left-6 md:top-20 md:left-12 z-10"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <img src="/logo.png" alt="Melon Media Logo" className="h-32 md:h-60 w-auto object-fill" />
+        <img src="/logo.png" alt="Melon Media Logo" className="h-32 md:h-72 w-auto object-fill" />
       </motion.div>
 
-      {/* Bottom left logo - rotated */}
+      {/* Bottom left logo - desktop only */}
       <motion.div 
         className="absolute bottom-48 left-0 z-10 hidden md:block"
         initial={{ opacity: 0, rotate: 15, y: 20 }}
@@ -25,7 +25,35 @@ const Hero = () => {
         <img 
           src="/logo.png" 
           alt="Melon Media Logo" 
-          className="h-32 md:h-60 w-auto object-fill transform -rotate-12" 
+          className="h-72 w-auto object-fill transform -rotate-12" 
+        />
+      </motion.div>
+
+      {/* Top right logo - desktop only */}
+      <motion.div 
+        className="absolute top-32 right-12 z-10 hidden md:block"
+        initial={{ opacity: 0, rotate: -10, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <img 
+          src="/logo.png" 
+          alt="Melon Media Logo" 
+          className="h-72 w-auto object-fill transform rotate-12" 
+        />
+      </motion.div>
+
+      {/* Bottom right logo - desktop only */}
+      <motion.div 
+        className="absolute bottom-64 right-0 z-10 hidden md:block"
+        initial={{ opacity: 0, rotate: -15, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        <img 
+          src="/logo.png" 
+          alt="Melon Media Logo" 
+          className="h-72 w-auto object-fill transform -rotate-6" 
         />
       </motion.div>
 
