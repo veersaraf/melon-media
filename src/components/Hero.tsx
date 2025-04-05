@@ -10,7 +10,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <img src="/logo.png" alt="Melon Media Logo" className="h-36 w-auto" />
+        <img src="/logo.png" alt="Melon Media Logo" className="h-40 w-auto" />
       </motion.div>
 
       {/* Abstract gradient blobs */}
