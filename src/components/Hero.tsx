@@ -1,9 +1,6 @@
-
 import { motion } from 'framer-motion';
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-white to-white">
+  return <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-white to-white">
       {/* Abstract gradient blobs */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Off-white background with hints of pink */}
@@ -18,50 +15,51 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl">
-          <motion.div 
-            className="mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <p className="text-lg md:text-xl text-gray-700 mb-2">
-              Melon Media enables the creation
-            </p>
-            <p className="text-lg md:text-xl text-gray-700 mb-2">
-              and delivery of stunning imagery
-            </p>
-            <p className="text-lg md:text-xl text-gray-700">
-              that fuels brand innovation.
-            </p>
+          <motion.div className="mb-16" initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }}>
+            
+            
+            
           </motion.div>
           
-          <motion.h1
-            className="text-6xl md:text-8xl font-bold text-gray-900 mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Product<br/>
+          <motion.h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-8" initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.2
+        }}>
+            Product<br />
             Photography
           </motion.h1>
           
-          <motion.div
-            className="text-lg md:text-xl text-gray-700 max-w-md"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <p>
-              Melon Media creates stunning product photography that showcases your products in their best light, delivering the quality and precision you need.
-            </p>
+          <motion.div className="text-lg md:text-xl text-gray-700 max-w-md" initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.4
+        }}>
+            <p>Melon Media blends AI precision with creative flair, crafting stunning product images effortlessly.</p>
           </motion.div>
         </div>
       </div>
       
       {/* Smooth gradient transition to the next section */}
       <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-b from-transparent to-pink-50/80 pointer-events-none"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
