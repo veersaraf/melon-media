@@ -105,19 +105,22 @@ const Gallery = () => {
         </div>
       </div>
       
-      {/* Project modal styled to match reference image */}
-      <Dialog open={!!selectedProject} onOpenChange={open => !open && setSelectedProject(null)}>
-        <DialogContent className="max-w-4xl p-0 overflow-hidden rounded-3xl border-0 bg-transparent">
-          {selectedProject && <div className="bg-gradient-to-br from-pink-100 to-pink-500 rounded-3xl overflow-hidden border-4 border-white">
-              <div className="relative">
-                <img src={selectedProject.image} alt={selectedProject.title} className="w-full object-cover" />
-              </div>
-              <div className="p-8 bg-white/20 backdrop-blur-sm">
-                <h3 className="text-2xl font-bold mb-2 text-white">{selectedProject.title}</h3>
-                <p className="text-sm font-medium text-white/80 mb-4">{selectedProject.category}</p>
-                <p className="text-white/90">{selectedProject.description}</p>
-              </div>
-            </div>}
+      {/* Simplified Modal */}
+      <Dialog 
+        open={!!selectedProject} 
+        onOpenChange={open => !open && setSelectedProject(null)}
+      >
+        <DialogContent className="max-w-3xl p-2 overflow-hidden rounded-2xl border-0 bg-white">
+          {selectedProject && (
+            <div className="relative w-full">
+              <img 
+                src={selectedProject.image} 
+                alt={selectedProject.title} 
+                className="w-full h-auto object-contain rounded-xl"
+                style={{ maxHeight: '80vh' }} // Ensures image doesn't exceed viewport height
+              />
+            </div>
+          )}
         </DialogContent>
       </Dialog>
     </section>;
