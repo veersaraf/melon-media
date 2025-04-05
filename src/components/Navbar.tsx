@@ -8,9 +8,6 @@ const Navbar = () => {
     <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-auto">
       <div className="px-5 py-2 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
         <nav className="flex items-center space-x-8">
-          <Link to="/" className="flex items-center">
-            <img src="/logo.png" alt="Melon Media Logo" className="h-8 w-auto mr-6" />
-          </Link>
           <Link 
             to="/" 
             className={`relative px-4 py-1 text-sm font-medium transition-colors ${activeSection === 'work' ? 'text-pink-500' : 'text-gray-800 hover:text-gray-600'}`}

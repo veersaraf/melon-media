@@ -3,6 +3,16 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-pink-50">
+      {/* Logo in top right */}
+      <motion.div 
+        className="absolute top-8 right-8 z-10"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <img src="/logo.png" alt="Melon Media Logo" className="h-12 w-auto" />
+      </motion.div>
+
       {/* Abstract gradient blobs */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-[50%] h-[50%] rounded-full bg-pink-200/20 blur-3xl"></div>
@@ -30,8 +40,8 @@ const Hero = () => {
         </motion.p>
       </div>
 
-      {/* Smooth gradient transition */}
-      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-b from-transparent to-pink-100/60 pointer-events-none"></div>
+      {/* Smooth gradient transition to work section */}
+      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-b from-pink-50 to-pink-50/80 pointer-events-none"></div>
     </section>
   );
 };
