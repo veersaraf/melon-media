@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 import Index from "@/pages/Index";
 import AboutPage from "@/pages/AboutPage";
@@ -31,7 +30,6 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
-        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

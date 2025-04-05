@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#2f5d8a] to-[#e48a50]">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-pink-100 to-pink-500">
       {/* Overlay gradient with grain texture */}
-      <div className="absolute inset-0 bg-black/10 z-0"></div>
+      <div className="absolute inset-0 bg-black/5 z-0"></div>
       
       {/* Large circular shapes */}
-      <div className="absolute top-0 left-0 w-[80%] h-[80%] rounded-full bg-[#2f5d8a] opacity-90 translate-x-[-30%] translate-y-[-30%] blur-3xl z-0"></div>
-      <div className="absolute bottom-0 right-0 w-[80%] h-[80%] rounded-full bg-[#e48a50] opacity-90 translate-x-[30%] translate-y-[30%] blur-3xl z-0"></div>
+      <div className="absolute top-0 left-0 w-[80%] h-[80%] rounded-full bg-pink-300 opacity-70 translate-x-[-30%] translate-y-[-30%] blur-3xl z-0"></div>
+      <div className="absolute bottom-0 right-0 w-[80%] h-[80%] rounded-full bg-pink-400 opacity-70 translate-x-[30%] translate-y-[30%] blur-3xl z-0"></div>
       
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl">

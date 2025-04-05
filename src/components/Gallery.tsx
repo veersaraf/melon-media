@@ -109,11 +109,11 @@ const Gallery = () => {
         </div>
       </div>
       
-      {/* Project modal */}
+      {/* Project modal styled to match reference image */}
       <Dialog open={!!selectedProject} onOpenChange={(open) => !open && setSelectedProject(null)}>
-        <DialogContent className="sm:max-w-3xl bg-white p-0 overflow-hidden">
+        <DialogContent className="max-w-4xl p-0 overflow-hidden rounded-3xl border-0 bg-transparent">
           {selectedProject && (
-            <div>
+            <div className="bg-gradient-to-br from-pink-100 to-pink-500 rounded-3xl overflow-hidden border-4 border-white">
               <div className="relative">
                 <img 
                   src={selectedProject.image} 
@@ -121,10 +121,10 @@ const Gallery = () => {
                   className="w-full object-cover"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
-                <p className="text-sm font-medium text-melon-primary mb-4">{selectedProject.category}</p>
-                <p className="text-melon-text">{selectedProject.description}</p>
+              <div className="p-8 bg-white/20 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold mb-2 text-white">{selectedProject.title}</h3>
+                <p className="text-sm font-medium text-white/80 mb-4">{selectedProject.category}</p>
+                <p className="text-white/90">{selectedProject.description}</p>
               </div>
             </div>
           )}
