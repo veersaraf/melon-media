@@ -9,15 +9,14 @@ const ContactButton = () => {
     <motion.button
       onClick={handleClick}
       className="
-        bg-[#F5A9A9] text-[#FFF5E0] 
-        font-bold text-2xl uppercase tracking-wider
-        px-10 py-4.5 rounded-full
-        w-[300px] text-center
-        shadow-lg hover:shadow-xl
+        bg-[#F5A9A9] text-white 
+        font-medium text-sm uppercase tracking-wide
+        px-6 py-2.5 rounded-lg
+        w-[200px] text-center
+        shadow-sm hover:shadow-md
         transition-all duration-200
         hover:-translate-y-0.5 active:translate-y-0.5
-        hover:shadow-[0_10px_20px_rgba(0,0,0,0.15)]
-        active:shadow-[0_5px_10px_rgba(0,0,0,0.1)]
+        hover:bg-opacity-90 active:bg-opacity-100
       "
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
