@@ -67,16 +67,21 @@ const Gallery = () => {
   const [selectedProject, setSelectedProject] = useState<null | typeof projects[0]>(null);
   
   return (
-    <section id="work" className="py-20 px-4">
-      <div className="container mx-auto">
+    <section id="work" className="pt-32 pb-20 px-4 bg-gradient-to-b from-pink-100/50 to-white relative">
+      {/* Gradient overlay to create bleed effect from Hero */}
+      <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-pink-300/30 to-transparent"></div>
+      
+      <div className="container mx-auto relative z-10">
         <motion.div 
-          className="mb-12 text-center"
+          className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Work</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-pink-400 bg-clip-text text-transparent">
+            Our Work
+          </h2>
           <p className="text-lg text-melon-text max-w-2xl mx-auto">
             Explore our portfolio of product photography and macro shots that help brands tell their story.
           </p>

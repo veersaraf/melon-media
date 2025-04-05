@@ -52,6 +52,9 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+      
+      {/* Gradient bleed effect */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-transparent to-pink-500/50 z-0"></div>
     </section>
   );
 };
