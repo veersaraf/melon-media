@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import ContactButton from './ContactButton';
+
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-pink-50">
       {/* Original logo in top left - visible on all screens */}
@@ -73,6 +75,16 @@ const Hero = () => {
           Melon Media blends AI precision with creative flair,<br />
           crafting stunning product images effortlessly.
         </motion.p>
+
+        {/* Add contact button with some spacing */}
+        <motion.div 
+          className="mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <ContactButton />
+        </motion.div>
       </div>
 
       {/* Smooth gradient transition to work section */}

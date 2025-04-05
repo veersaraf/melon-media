@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import ContactButton from '@/components/ContactButton';
 
 const AboutPage = () => {
   return (
@@ -10,12 +11,12 @@ const AboutPage = () => {
       </div>
 
       {/* About content */}
-      <section className="container mx-auto relative z-10 flex justify-center items-center">
+      <section className="container mx-auto relative z-10 flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl mx-auto bg-white bg-opacity-60 backdrop-blur-sm rounded-2xl shadow-xl p-8"
+          className="max-w-2xl mx-auto bg-white bg-opacity-60 backdrop-blur-sm rounded-2xl shadow-xl p-8 mb-12"
         >
           <div className="space-y-6 text-lg text-gray-800 text-center">
             <p>
@@ -30,6 +31,15 @@ const AboutPage = () => {
               <span className="text-pink-500 font-semibold"> stand out in today's competitive market</span>.
             </p>
           </div>
+        </motion.div>
+
+        {/* Add contact button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <ContactButton />
         </motion.div>
       </section>
     </div>
