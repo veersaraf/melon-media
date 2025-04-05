@@ -5,18 +5,32 @@ import { ChevronDown } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-pink-50">
-      {/* Logo - adjusted for mobile */}
+      {/* Top logo - adjusted spacing */}
       <motion.div 
-        className="absolute top-4 left-6 md:top-2 md:left-12 z-10"
+        className="absolute top-16 left-6 md:top-20 md:left-12 z-10"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <img src="/logo.png" alt="Melon Media Logo" className="h-40 md:h-60 w-auto object-fill" />
+        <img src="/logo.png" alt="Melon Media Logo" className="h-32 md:h-60 w-auto object-fill" />
       </motion.div>
 
-      {/* Center content - adjusted spacing for mobile */}
-      <div className="container mx-auto px-4 z-10 text-center mt-24 md:mt-0">
+      {/* Bottom left logo - rotated */}
+      <motion.div 
+        className="absolute bottom-48 left-0 z-10 hidden md:block"
+        initial={{ opacity: 0, rotate: 15, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <img 
+          src="/logo.png" 
+          alt="Melon Media Logo" 
+          className="h-32 md:h-60 w-auto object-fill transform -rotate-12" 
+        />
+      </motion.div>
+
+      {/* Center content - reduced top spacing */}
+      <div className="container mx-auto px-4 z-10 text-center mt-12 md:mt-0">
         <motion.h1 
           className="text-4xl md:text-7xl font-bold text-gray-900 leading-tight mb-6 px-4"
           initial={{ opacity: 0, y: 20 }}
@@ -36,7 +50,7 @@ const Hero = () => {
           crafting stunning product images effortlessly.
         </motion.p>
 
-        {/* Contact button - adjusted for mobile */}
+        {/* Contact button */}
         <motion.div 
           className="mt-8 md:mt-12"
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +61,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Work button - adjusted position for mobile */}
+      {/* Work button */}
       <div className="absolute bottom-16 md:bottom-24 w-full flex justify-center z-30">
         <motion.button
           onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
