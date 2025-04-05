@@ -58,6 +58,20 @@ const projects = [{
   category: "Product",
   image: "/gallery/shot9.png",
   description: "Detailed product photography with optimal lighting and composition."
+},
+{
+  id: 10,
+  title: "Product Photography",
+  category: "Product",
+  image: "/gallery/shot10.jpeg",
+  description: "Detailed product photography with optimal lighting and composition."
+},
+{
+  id: 11,
+  title: "Product Photography",
+  category: "Product",
+  image: "/gallery/shot11.jpeg",
+  description: "Detailed product photography with optimal lighting and composition."
 }];
 const Gallery = () => {
   const [selectedProject, setSelectedProject] = useState<null | typeof projects[0]>(null);
