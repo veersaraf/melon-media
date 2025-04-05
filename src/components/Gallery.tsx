@@ -39,20 +39,33 @@ const projects = [
     category: "Branding",
     image: "/lovable-uploads/d3123438-486c-4275-95a6-c21d583ad3d2.png",
     description: "Our brand identity showcasing the minimal and modern aesthetic we bring to our work."
+  },
+  {
+    id: 6,
+    title: "Navbar Reference",
+    category: "UI Design",
+    image: "/lovable-uploads/27bc8a4b-f77a-4ed2-ac03-caf5a5d3c824.png",
+    description: "Clean navbar design for modern websites."
+  },
+  {
+    id: 7,
+    title: "Hero Reference",
+    category: "UI Design",
+    image: "/lovable-uploads/ed4cbb61-9c0c-42ee-bc9b-3b451c2e74ee.png",
+    description: "Beautiful hero section with gradient background and clean typography."
+  },
+  {
+    id: 8,
+    title: "Product Photography",
+    category: "Product",
+    image: "/lovable-uploads/4f9ebaaf-61f9-4c32-9a80-5dd5a13d5f87.png",
+    description: "Detailed product photography with optimal lighting and composition."
   }
 ];
 
-// Filter categories
-const categories = ["All", "Beauty", "Technology", "Culinary", "Fashion", "Branding"];
-
 const Gallery = () => {
   const [selectedProject, setSelectedProject] = useState<null | typeof projects[0]>(null);
-  const [activeCategory, setActiveCategory] = useState("All");
   
-  const filteredProjects = activeCategory === "All" 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory);
-
   return (
     <section id="work" className="py-20 px-4">
       <div className="container mx-auto">
@@ -69,26 +82,9 @@ const Gallery = () => {
           </p>
         </motion.div>
         
-        {/* Category filters */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm transition-colors ${
-                activeCategory === category 
-                  ? 'bg-melon-primary text-white' 
-                  : 'bg-white text-melon-text hover:bg-melon-secondary/10'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-        
         {/* Gallery grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               className="project-card"
@@ -107,7 +103,6 @@ const Gallery = () => {
               </div>
               <div className="mt-4">
                 <h3 className="font-medium text-lg">{project.title}</h3>
-                <p className="text-sm text-melon-text">{project.category}</p>
               </div>
             </motion.div>
           ))}
