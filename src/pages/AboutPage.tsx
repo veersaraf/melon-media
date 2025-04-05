@@ -32,14 +32,6 @@ const AboutPage = () => {
               <span className="text-pink-500 font-semibold"> stand out in a crowded market</span>.
             </p>
           </div>
-
-          {/* Image/Visual Placeholder */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-pink-100 rounded-xl shadow-inner aspect-square"></div>
-            <div className="bg-pink-200 rounded-xl shadow-inner aspect-square"></div>
-            <div className="bg-pink-200 rounded-xl shadow-inner aspect-square"></div>
-            <div className="bg-pink-100 rounded-xl shadow-inner aspect-square"></div>
-          </div>
         </motion.div>
       </section>
     </div>
