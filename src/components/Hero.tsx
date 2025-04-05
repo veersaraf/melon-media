@@ -1,18 +1,44 @@
 import { motion } from 'framer-motion';
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-pink-50">
-      {/* Logo in top left */}
-      <motion.div className="absolute top-2 left-12 z-10" initial={{
-      opacity: 0,
-      y: -20
-    }} animate={{
-      opacity: 1,
-      y: 0
-    }} transition={{
-      duration: 0.6,
-      delay: 0.2
-    }}>
+      {/* Original logo in top left */}
+      <motion.div 
+        className="absolute top-2 left-12 z-10"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <img src="/logo.png" alt="Melon Media Logo" className="h-60 w-auto object-fill" />
+      </motion.div>
+
+      {/* Second logo - top right, slightly rotated */}
+      <motion.div 
+        className="absolute top-24 right-16 z-10"
+        initial={{ opacity: 0, rotate: -15, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <img src="/logo.png" alt="Melon Media Logo" className="h-60 w-auto object-fill transform rotate-12" />
+      </motion.div>
+
+      {/* Third logo - bottom left, rotated other direction */}
+      <motion.div 
+        className="absolute bottom-48 left-24 z-10"
+        initial={{ opacity: 0, rotate: 15, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <img src="/logo.png" alt="Melon Media Logo" className="h-60 w-auto object-fill transform -rotate-12" />
+      </motion.div>
+
+      {/* Fourth logo - bottom right */}
+      <motion.div 
+        className="absolute bottom-32 right-20 z-10"
+        initial={{ opacity: 0, rotate: -10, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        <img src="/logo.png" alt="Melon Media Logo" className="h-60 w-auto object-fill transform rotate-6" />
       </motion.div>
 
       {/* Abstract gradient blobs */}
