@@ -92,18 +92,18 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Animated scroll arrow */}
+      {/* Improved animated scroll arrow */}
       <motion.button
         onClick={scrollToWork}
         className="
-          absolute bottom-12 left-1/2 -translate-x-1/2
-          flex items-center gap-2
-          px-6 py-2
-          bg-white/80 backdrop-blur-md
-          rounded-full shadow-sm
-          text-sm font-medium text-gray-800
-          hover:shadow-md transition-all duration-300
-          group
+          absolute bottom-16 left-1/2 -translate-x-1/2
+          flex flex-col items-center gap-2
+          px-8 py-3
+          bg-white/90 backdrop-blur-md
+          rounded-full shadow-md
+          hover:shadow-lg
+          transition-all duration-300
+          group z-20
         "
         initial={{ opacity: 0, y: 20 }}
         animate={{ 
@@ -112,7 +112,9 @@ const Hero = () => {
         }}
         transition={{ duration: 0.6, delay: 0.8 }}
       >
-        Work
+        <span className="text-base font-medium text-gray-800 tracking-wide">
+          Work
+        </span>
         <motion.div
           animate={{ 
             y: [0, 4, 0],
@@ -123,7 +125,7 @@ const Hero = () => {
             ease: "easeInOut"
           }}
         >
-          <ChevronDown className="w-4 h-4 text-pink-500 group-hover:text-pink-600" />
+          <ChevronDown className="w-5 h-5 text-pink-500 group-hover:text-pink-600" />
         </motion.div>
       </motion.button>
 

@@ -76,25 +76,25 @@ const Gallery = () => {
         
         {/* Gallery grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {projects.map((project, index) => <motion.div key={project.id} className="project-card" onClick={() => setSelectedProject(project)} initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.5,
-          delay: index * 0.1
-        }}>
+          {projects.map((project, index) => (
+            <motion.div 
+              key={project.id} 
+              className="project-card" 
+              onClick={() => setSelectedProject(project)}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
               <div className="aspect-square overflow-hidden rounded-xl">
-                <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                />
               </div>
-              <div className="mt-4">
-                <h3 className="font-medium text-lg">{project.title}</h3>
-              </div>
-            </motion.div>)}
+            </motion.div>
+          ))}
         </div>
       </div>
       
