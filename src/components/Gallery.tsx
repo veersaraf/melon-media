@@ -43,7 +43,7 @@ const projects = [{
   id: 7,
   title: "Hero Reference",
   category: "UI Design",
-  image: "/gallery/shot7.png",
+  image: "/gallery/shot7.JPG",
   description: "Beautiful hero section with gradient background and clean typography."
 }, {
   id: 8,
@@ -85,6 +85,13 @@ const projects = [{
   title: "Product Photography",
   category: "Product",
   image: "/gallery/shot13.webp",
+  description: "Detailed product photography with optimal lighting and composition."
+}, 
+{
+  id: 14,
+  title: "Product Photography",
+  category: "Product",
+  image: "/gallery/shot14.png",
   description: "Detailed product photography with optimal lighting and composition."
 }];
 const Gallery = () => {
@@ -133,12 +140,12 @@ const Gallery = () => {
         </div>
       </div>
       
-      {/* Updated Modal */}
+      {/* Updated Modal for consistent appearance across devices */}
       <Dialog 
         open={!!selectedProject} 
         onOpenChange={open => !open && setSelectedProject(null)}
       >
-        <DialogContent className="max-w-[90vw] md:max-w-[80vw] p-3 bg-transparent border-0">
+        <DialogContent className="max-w-[90vw] md:max-w-[600px] p-3 bg-transparent border-0">
           {selectedProject && (
             <div className="relative w-full bg-white rounded-[2rem] p-3 shadow-lg">
               <img 
@@ -146,8 +153,9 @@ const Gallery = () => {
                 alt={selectedProject.title} 
                 className="w-full h-auto object-contain rounded-[1.5rem]"
                 style={{
-                  maxHeight: '85vh',
-                  aspectRatio: 'auto'
+                  maxHeight: '600px',
+                  aspectRatio: '1 / 1',
+                  objectFit: 'contain'
                 }}
               />
             </div>
