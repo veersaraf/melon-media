@@ -140,7 +140,7 @@ const Gallery = () => {
         </div>
       </div>
       
-      {/* Updated Modal for consistent appearance across devices */}
+      {/* Updated Modal to handle different aspect ratios */}
       <Dialog 
         open={!!selectedProject} 
         onOpenChange={open => !open && setSelectedProject(null)}
@@ -153,8 +153,8 @@ const Gallery = () => {
                 alt={selectedProject.title} 
                 className="w-full h-auto object-contain rounded-[1.5rem]"
                 style={{
-                  maxHeight: '600px',
-                  aspectRatio: '1 / 1',
+                  maxHeight: '80vh',
+                  width: '100%',
                   objectFit: 'contain'
                 }}
               />
