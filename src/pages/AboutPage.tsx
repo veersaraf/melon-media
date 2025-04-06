@@ -20,7 +20,7 @@ const AboutPage = () => {
         >
           <div className="space-y-6 text-lg text-gray-800 text-center">
             <p>
-              At <span className="text-pink-500 font-semibold">Melon Media</span>, we specialize in creating
+              Founded by Veer Saraf, <span className="text-pink-500 font-semibold">Melon Media</span> specializes in creating
               <span className="text-pink-500 font-semibold"> stunning product photographs</span> that showcase your products in their best light. Our team combines
               <span className="text-pink-500 font-semibold"> technical expertise</span> with
               <span className="text-pink-500 font-semibold"> creative vision</span> to deliver images that tell your brand's story and captivate your audience.
