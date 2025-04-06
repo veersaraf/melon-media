@@ -56,7 +56,7 @@ const projects = [{
   id: 9,
   title: "Product Photography",
   category: "Product",
-  image: "/gallery/shot9.png",
+  image: "/gallery/shot9.jpg",
   description: "Detailed product photography with optimal lighting and composition."
 },
 {
