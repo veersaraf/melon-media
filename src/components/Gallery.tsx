@@ -129,10 +129,14 @@ export default function Gallery() {
               <motion.div
                 key={image.src}
                 layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ 
+                  duration: 0.2,
+                  delay: index * 0.05,
+                  ease: "easeInOut"
+                }}
                 className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
                 onClick={() => setSelectedImage(image.src)}
               >
