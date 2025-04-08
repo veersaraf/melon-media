@@ -5,8 +5,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const categories = [
   "Beauty & Skincare",
-  "Food & Drink",
   "Fashion & Accessories",
+  "Food & Drink",
   "Lifestyle & Wellness",
 ];
 

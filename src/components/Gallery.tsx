@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useTransform, useAnimation } from "framer-motion";
 import CategoryNavbar from "./CategoryNavbar";
 
 const images = [
@@ -62,13 +62,49 @@ const images = [
   }
 ];
 
+const categories = [
+  "Beauty & Skincare",
+  "Food & Drink",
+  "Fashion & Accessories",
+  "Lifestyle & Wellness",
+];
+
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("Beauty & Skincare");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const controls = useAnimation();
+  
+  // Motion values for swipe detection - removed opacity transform
+  const x = useMotionValue(0);
+  const xInput = [0, 100, -100];
+  const scale = useTransform(x, xInput, [1, 0.95, 0.95]);
 
   const filteredImages = images.filter(
     (image) => image.category === activeCategory
   );
+
+  const handleDragEnd = (event: any, info: any) => {
+    const threshold = 100; // minimum distance for swipe
+    const velocity = info.velocity.x;
+    
+    if (Math.abs(info.offset.x) > threshold || Math.abs(velocity) > 500) {
+      const currentIndex = categories.indexOf(activeCategory);
+      let newIndex;
+      
+      if (info.offset.x > 0 || velocity > 0) {
+        // Swipe right - go to previous category
+        newIndex = currentIndex > 0 ? currentIndex - 1 : categories.length - 1;
+      } else {
+        // Swipe left - go to next category
+        newIndex = currentIndex < categories.length - 1 ? currentIndex + 1 : 0;
+      }
+      
+      setActiveCategory(categories[newIndex]);
+    }
+    
+    // Reset position
+    controls.start({ x: 0 });
+  };
 
   return (
     <section id="work" className="min-h-screen pt-16 md:pt-32 pb-16 md:pb-20 px-4">
@@ -81,6 +117,12 @@ export default function Gallery() {
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 px-2 md:px-4 min-h-[50vh]"
           layout
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.2}
+          onDragEnd={handleDragEnd}
+          style={{ x, scale }}
+          animate={controls}
         >
           <AnimatePresence mode="wait">
             {filteredImages.map((image, index) => (
@@ -104,6 +146,21 @@ export default function Gallery() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Category Indicators */}
+        <div className="flex justify-center gap-2 mt-4">
+          {categories.map((category, index) => (
+            <motion.button
+              key={category}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                activeCategory === category ? 'bg-pink-400' : 'bg-gray-300'
+              }`}
+              onClick={() => setActiveCategory(category)}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            />
+          ))}
+        </div>
 
         {/* Modal */}
         <AnimatePresence>
