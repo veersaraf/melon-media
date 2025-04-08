@@ -64,8 +64,8 @@ const images = [
 
 const categories = [
   "Beauty & Skincare",
-  "Food & Drink",
   "Fashion & Accessories",
+  "Food & Drink",
   "Lifestyle & Wellness",
 ];
 
