@@ -137,7 +137,7 @@ export default function Gallery() {
                   delay: index * 0.05,
                   ease: "easeInOut"
                 }}
-                className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
+                className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer [@media(max-width:768px)]:!opacity-100 [@media(max-width:768px)]:!transition-none"
                 onClick={() => setSelectedImage(image.src)}
               >
                 <img
