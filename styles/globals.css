@@ -1,0 +1,114 @@
+/* Reset everything first */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Set the base gradient on html and body */
+html, 
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #fff9f0;
+  overflow-x: hidden;
+}
+
+/* Reset any potential background colors */
+#root,
+#__next,
+main,
+.container,
+.hero-section,
+.work-section,
+.about-section,
+section,
+div {
+  background: transparent !important;
+}
+
+/* Style the layout containers without backgrounds */
+.layout-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure content sections don't add backgrounds */
+.content-section {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Reset any potential background colors on navigation */
+nav,
+header,
+footer {
+  background: transparent !important;
+}
+
+/* Hero section styling */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.contact-button {
+  background-color: #ffb4b4;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #ff9e9e;
+}
+
+/* Work section styles */
+.work-section {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 2rem;
+  /* For smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+/* Optional: Customize scrollbar */
+.work-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.work-section::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.work-section::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+} 

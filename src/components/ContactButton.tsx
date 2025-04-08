@@ -11,7 +11,7 @@ const ContactButton = () => {
       className="
         bg-[#F5A9A9] text-white 
         font-medium text-sm uppercase tracking-wide
-        px-6 py-2.5 rounded-lg
+        px-6 py-2.5 rounded-3xl
         w-[200px] text-center
         shadow-sm hover:shadow-md
         transition-all duration-200

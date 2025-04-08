@@ -4,8 +4,8 @@ import { ChevronDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-pink-50">
-      {/* Top left logo - smaller size */}
+    <section className="relative min-h-screen flex items-center justify-center">
+      {/* Top left logo */}
       <motion.div 
         className="absolute top-16 left-6 md:top-24 md:left-16 z-10"
         initial={{ opacity: 0, y: -20 }}
@@ -57,10 +57,9 @@ const Hero = () => {
         />
       </motion.div>
 
-      {/* Center content - adjusted spacing and sizes */}
-      <div className="container mx-auto px-4 z-10 text-center mt-12 md:mt-0">
+      <div className="container mx-auto px-4 z-10 text-center">
         <motion.h1 
-          className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6 px-4"
+          className="text-4xl md:text-6xl font-medium text-gray-900 leading-tight mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -69,7 +68,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p 
-          className="text-base md:text-lg text-gray-600 max-w-lg mx-auto px-6"
+          className="text-base md:text-lg text-gray-600 max-w-lg mx-auto mb-8 font-normal"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -78,9 +77,7 @@ const Hero = () => {
           crafting stunning product images effortlessly.
         </motion.p>
 
-        {/* Contact button */}
         <motion.div 
-          className="mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -89,31 +86,18 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Work button - adjusted size */}
-      <div className="absolute bottom-16 md:bottom-20 w-full flex justify-center z-30">
+      <div className="absolute bottom-16 w-full flex justify-center">
         <motion.button
           onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
-          className="
-            inline-flex items-center gap-2
-            px-5 py-1.5
-            bg-pink-100 rounded-full
-            transition-all duration-300
-            hover:bg-pink-200
-            shadow-sm
-          "
+          className="inline-flex items-center gap-2 px-5 py-1.5 bg-pink-100 rounded-full transition-all duration-300 hover:bg-pink-200"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <ChevronDown className="w-3.5 h-3.5 text-gray-900" />
-          <span className="text-sm text-gray-900">
-            Work
-          </span>
+          <span className="text-sm text-gray-900">Work</span>
         </motion.button>
       </div>
-
-      {/* Gradient transition */}
-      <div className="absolute bottom-0 left-0 w-full h-24 md:h-28 bg-gradient-to-b from-pink-50 to-pink-50/80 pointer-events-none z-20" />
     </section>
   );
 };

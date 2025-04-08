@@ -1,16 +1,24 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState('work');
+  const location = useLocation();
+  const [activeSection, setActiveSection] = useState(location.pathname === '/about' ? 'about' : 'work');
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-auto">
-      <div className="px-5 py-2 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
-        <nav className="flex items-center space-x-8">
+    <header className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50">
+      <div className="px-3 md:px-5 py-1.5 md:py-2 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
+        <nav className="flex items-center space-x-4 md:space-x-8">
           <Link 
             to="/" 
-            className={`relative px-4 py-1 text-sm font-medium transition-colors ${activeSection === 'work' ? 'text-pink-500' : 'text-gray-800 hover:text-gray-600'}`}
+            className={`relative px-3 md:px-4 py-1 text-sm font-medium transition-colors ${activeSection === 'work' ? 'text-pink-500' : 'text-gray-800 hover:text-gray-600'}`}
             onClick={() => setActiveSection('work')}
           >
             {activeSection === 'work' && (
@@ -20,7 +28,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/about" 
-            className={`relative px-4 py-1 text-sm font-medium transition-colors ${activeSection === 'about' ? 'text-pink-500' : 'text-gray-800 hover:text-gray-600'}`}
+            className={`relative px-3 md:px-4 py-1 text-sm font-medium transition-colors ${activeSection === 'about' ? 'text-pink-500' : 'text-gray-800 hover:text-gray-600'}`}
             onClick={() => setActiveSection('about')}
           >
             {activeSection === 'about' && (
