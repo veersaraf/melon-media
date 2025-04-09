@@ -4,18 +4,133 @@ import { motion, AnimatePresence, useMotionValue, useTransform, useAnimation } f
 import CategoryNavbar from "./CategoryNavbar";
 
 const images = [
+  // Beauty & Skincare
   {
-    src: "/gallery/shot1.jpeg",
+    src: "/gallery/beautySkincare/shot1.JPG",
+    category: "Beauty & Skincare"
+  },
+  {
+    src: "/gallery/beautySkincare/shot2.png",
+    category: "Beauty & Skincare"
+  },
+  {
+    src: "/gallery/beautySkincare/shot3.png",
+    category: "Beauty & Skincare"
+  },
+  {
+    src: "/gallery/beautySkincare/shot4.png",
+    category: "Beauty & Skincare"
+  },
+  {
+    src: "/gallery/beautySkincare/shot5.png",
+    category: "Beauty & Skincare"
+  },
+  {
+    src: "/gallery/beautySkincare/shot6.png",
+    category: "Beauty & Skincare"
+  },
+  {
+    src: "/gallery/beautySkincare/shot7.png",
+    category: "Beauty & Skincare"
+  },
+  {
+    src: "/gallery/beautySkincare/shot8.png",
+    category: "Beauty & Skincare"
+  },
+  {
+    src: "/gallery/beautySkincare/shot9.png",
+    category: "Beauty & Skincare"
+  },
+  {
+    src: "/gallery/beautySkincare/shot10.png",
+    category: "Beauty & Skincare"
+  },
+  {
+    src: "/gallery/beautySkincare/shot11.png",
+    category: "Beauty & Skincare"
+  },
+
+  // Fashion & Accessories
+  {
+    src: "/gallery/fashionAccesories/shot1.jpeg",
     category: "Fashion & Accessories"
   },
   {
-    src: "/gallery/shot2.jpeg",
+    src: "/gallery/fashionAccesories/shot2.jpeg",
     category: "Fashion & Accessories"
   },
+  {
+    src: "/gallery/fashionAccesories/shot3.png",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot4.png",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot5.jpg",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot6.png",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot7.png",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot8.png",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot9.jpg",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot10.png",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot11.png",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot12.jpeg",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot13.jpg",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot14.png",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot15.png",
+    category: "Fashion & Accessories"
+  },
+  {
+    src: "/gallery/fashionAccesories/shot16.jpg",
+    category: "Fashion & Accessories"
+  },
+
+  // Food & Drink
   {
     src: "/gallery/shot3.png",
     category: "Food & Drink"
   },
+  {
+    src: "/gallery/shot11.jpeg",
+    category: "Food & Drink"
+  },
+  {
+    src: "/gallery/shot14.png",
+    category: "Food & Drink"
+  },
+
+  // Lifestyle & Wellness
   {
     src: "/gallery/shot4.png",
     category: "Lifestyle & Wellness"
@@ -25,40 +140,12 @@ const images = [
     category: "Lifestyle & Wellness"
   },
   {
-    src: "/gallery/shot6.png",
-    category: "Fashion & Accessories"
-  },
-  {
-    src: "/gallery/shot7.JPG",
-    category: "Beauty & Skincare"
-  },
-  {
-    src: "/gallery/shot8.png",
-    category: "Fashion & Accessories"
-  },
-  {
-    src: "/gallery/shot9.jpg",
-    category: "Fashion & Accessories"
-  },
-  {
     src: "/gallery/shot10.jpeg",
     category: "Lifestyle & Wellness"
   },
   {
-    src: "/gallery/shot11.jpeg",
-    category: "Food & Drink"
-  },
-  {
-    src: "/gallery/shot12.jpeg",
-    category: "Fashion & Accessories"
-  },
-  {
     src: "/gallery/shot13.webp",
     category: "Lifestyle & Wellness"
-  },
-  {
-    src: "/gallery/shot14.png",
-    category: "Food & Drink"
   }
 ];
 
@@ -174,27 +261,32 @@ export default function Gallery() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedImage(null)}
-              className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-8"
+              className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 md:p-8"
             >
               <motion.div
                 initial={{ scale: 0.5 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.5 }}
-                className="relative bg-white rounded-[2rem] p-4 max-h-[90vh] max-w-[90vw] w-auto h-auto"
+                className="relative bg-white rounded-[2rem] p-4 max-h-[90vh] max-w-[90vw] w-auto h-auto flex items-center justify-center"
                 onClick={e => e.stopPropagation()}
               >
-                <div className="relative w-full h-full rounded-[1.75rem] overflow-hidden">
+                <div className="relative w-full h-full rounded-[1.75rem] overflow-hidden flex items-center justify-center">
                   <img
                     src={selectedImage}
                     alt="Selected gallery image"
-                    className="w-full h-full object-contain max-h-[80vh]"
+                    className="max-h-[80vh] max-w-[80vw] w-auto h-auto object-contain"
+                    style={{ 
+                      border: '1px solid #e5e7eb',
+                      borderRadius: '1.5rem',
+                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+                    }}
                   />
                 </div>
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="absolute top-6 right-6 text-black/50 hover:text-black/70 transition-colors"
+                  className="absolute top-6 right-6 text-black/50 hover:text-black/70 transition-colors bg-white/80 rounded-full p-1.5 hover:bg-white"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
