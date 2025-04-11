@@ -1,34 +1,27 @@
 export const metadata = {
   metadataBase: new URL('https://www.melonmedia.site'),
-  title: 'Melon Media | High-End Product Visuals',
-  description: 'We craft high-end product visuals for beauty & skincare brands. Transform your brand with scroll-stopping photography.',
+  title: 'Melon Media',
+  description: 'Product shots made simple',
   openGraph: {
-    title: 'Melon Media | High-End Product Visuals',
-    description: 'We craft high-end product visuals for beauty & skincare brands. Transform your brand with scroll-stopping photography.',
     url: 'https://www.melonmedia.site',
-    siteName: 'Melon Media',
+    type: 'website',
+    title: 'Melon Media',
+    description: 'Product shots made simple',
     images: [{
-      url: '/og-image.jpg',
+      url: 'https://opengraph.b-cdn.net/production/images/703ffed9-0bb8-4926-9559-fa12186b312d.jpg?token=i7Vu_-h8zAwrxfG5pXQLk4En1-A7L6h4Zt3BPvBGmkU&height=630&width=1200&expires=33280350381',
       width: 1200,
       height: 630,
-      alt: 'Melon Media - Beauty & Skincare Product Photography',
+      alt: 'Melon Media',
     }],
-    locale: 'en_US',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Melon Media | High-End Product Visuals',
-    description: 'We craft high-end product visuals for beauty & skincare brands. Transform your brand with scroll-stopping photography.',
-    images: ['/og-image.jpg'],
+    domain: 'melonmedia.site',
+    url: 'https://www.melonmedia.site',
+    title: 'Melon Media',
+    description: 'Product shots made simple',
+    images: ['https://opengraph.b-cdn.net/production/images/703ffed9-0bb8-4926-9559-fa12186b312d.jpg?token=i7Vu_-h8zAwrxfG5pXQLk4En1-A7L6h4Zt3BPvBGmkU&height=630&width=1200&expires=33280350381'],
   },
-  other: {
-    'og:image': 'https://www.melonmedia.site/og-image.jpg',
-    'og:image:width': '1200',
-    'og:image:height': '630',
-    'og:type': 'website',
-    'og:site_name': 'Melon Media',
-  }
 };
 
 export default function RootLayout({
@@ -39,11 +32,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta property="og:image" content="https://www.melonmedia.site/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://www.melonmedia.site" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Melon Media" />
+        <meta property="og:title" content="Melon Media" />
+        <meta property="og:description" content="Product shots made simple" />
+        <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/703ffed9-0bb8-4926-9559-fa12186b312d.jpg?token=i7Vu_-h8zAwrxfG5pXQLk4En1-A7L6h4Zt3BPvBGmkU&height=630&width=1200&expires=33280350381" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="melonmedia.site" />
+        <meta property="twitter:url" content="https://www.melonmedia.site" />
+        <meta name="twitter:title" content="Melon Media" />
+        <meta name="twitter:description" content="Product shots made simple" />
+        <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/703ffed9-0bb8-4926-9559-fa12186b312d.jpg?token=i7Vu_-h8zAwrxfG5pXQLk4En1-A7L6h4Zt3BPvBGmkU&height=630&width=1200&expires=33280350381" />
+        
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
