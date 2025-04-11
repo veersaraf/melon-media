@@ -8,7 +8,7 @@ export const metadata = {
     title: 'Melon Media',
     description: 'Product shots made simple',
     images: [{
-      url: 'https://freeimage.host/i/3cql7Pp',
+      url: 'https://iili.io/3cql7Pp.jpg',
       width: 1200,
       height: 630,
       alt: 'Melon Media',
