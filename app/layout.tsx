@@ -9,7 +9,7 @@ export const metadata = {
     description: 'We create stunning product photography for beauty, skincare, and lifestyle brands. Professional product shots made simple.',
     siteName: 'Melon Media',
     images: [{
-      url: '/og-image.jpg',
+      url: 'public/meta-placeholder.png',
       width: 1200,
       height: 630,
       alt: 'Melon Media - Professional Product Photography',
