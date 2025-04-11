@@ -8,7 +8,7 @@ export const metadata = {
     title: 'Melon Media',
     description: 'Product shots made simple',
     images: [{
-      url: 'https://opengraph.b-cdn.net/production/images/703ffed9-0bb8-4926-9559-fa12186b312d.jpg?token=i7Vu_-h8zAwrxfG5pXQLk4En1-A7L6h4Zt3BPvBGmkU&height=630&width=1200&expires=33280350381',
+      url: 'https://freeimage.host/i/3cql7Pp',
       width: 1200,
       height: 630,
       alt: 'Melon Media',
