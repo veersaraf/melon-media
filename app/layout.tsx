@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+
 export const metadata = {
   metadataBase: new URL('https://www.melonmedia.site'),
   title: 'Melon Media | Product Photography Studio',
@@ -59,6 +61,7 @@ export default function RootLayout({
         <main className="layout-container">
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   )
